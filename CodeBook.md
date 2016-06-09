@@ -1,5 +1,4 @@
-This file -- Codebook Markdown document -- describes all the variables, data and any transformations I did to clean up the Wearable Computing Datasets obtained from
-====================================================================================================================================================================
+### This file -- Codebook Markdown document -- describes all the variables, data and any transformations I did to clean up the Wearable Computing Datasets obtained from
 
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](Original%20Dataset%20Location)
 
@@ -23,12 +22,12 @@ Description how to Read in the Data
 
 > The feature cleaning transformations were implemented as follows:
 
--   `t` \(\rightarrow\) `time` (`t` at the beginning of a variable name)
--   `t` \(\rightarrow\) `freq` (`f` at the beginning of a variable name)
--   `?mean[(][)]-?` \(\rightarrow\) `Mean` (obtaining a cleaned variable `Mean`)
--   `-?std[()][)]-?` \(\rightarrow\) `Std` (obtaining a cleaned variable `Std`)
--   `-?meanFreq[()][)]-?` \(\rightarrow\) `MeanFreq` (obtaining a cleaned variable `MeanFreq`)
--   `BodyBody` \(\rightarrow\) `Body` (removing duplicates from names)
+-   `t` into `time` (`t` at the beginning of a variable name)
+-   `t` into `freq` (`f` at the beginning of a variable name)
+-   `?mean[(][)]-?` into `Mean` (obtaining a cleaned variable `Mean`)
+-   `-?std[()][)]-?` into `Std` (obtaining a cleaned variable `Std`)
+-   `-?meanFreq[()][)]-?` into `MeanFreq` (obtaining a cleaned variable `MeanFreq`)
+-   `BodyBody` into `Body` (removing duplicates from names)
 
 > Appropriately labelling the dataset:
 

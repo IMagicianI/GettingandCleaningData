@@ -10,7 +10,10 @@ Description how to Read in the Data
 
 ### Step 1 Requirements : "Merges the training and the test sets to create one data set."
 
-> The workflow has been implemented in the following steps: \* Firstly, I defined a function called `fileLocation` that stores the full paths of the given files named `train.txt`, `train.txt`, `features.txt`, `activity_labels.txt`, `y_test.txt`, `y_train.txt`, `subject_test.txt`, `subject_train.txt`. The datasets are read in using the `read.table` function. \* Secondly, train and test sets were combined using the `rbind` command and variable names were assigned by reading in the features into the `featureNames` variable and then assigning this vector to the column names of the merged dataset.
+> The workflow has been implemented in the following steps:
+
+-   Firstly, I defined a function called `fileLocation` that stores the full paths of the given files named `train.txt`, `train.txt`, `features.txt`, `activity_labels.txt`, `y_test.txt`, `y_train.txt`, `subject_test.txt`, `subject_train.txt`. The datasets are read in using the `read.table` function.
+-   Secondly, train and test sets were combined using the `rbind` command and variable names were assigned by reading in the features into the `featureNames` variable and then assigning this vector to the column names of the merged dataset.
 
 ### Step 2 Requirements: "Extracts only the measurements on the mean and standard deviation for each measurement. "
 

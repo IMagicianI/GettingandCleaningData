@@ -11,7 +11,7 @@ Data Analysis
 -   Source the script `run_analysis.R` in R: `source("run_analysis.R")`
 
 -   To get the datasets into `R`, run the first of the two last lines in the script: `tidydatalist <- GetBothDatasets_in_List()`
--   To output the postprocessed tidy datasets to files, run the last line of the script: `WriteDataToFiles(tidydatalist)` -- two new files containing the tidy datasets `tidy1.csv` and `tidy2.csv`, two independent tidy data sets  will be created. The tidy2 files contains  the average of each variable for each activity and each subject.
+-   To output the postprocessed tidy datasets to files, run the last line of the script: `WriteDataToFiles(tidydatalist)` -- two new files containing the tidy datasets `tidy1.csv` and `tidy2.csv`, two independent tidy data sets  will be created. The tidy2 file contains  the average of each variable for each activity and each subject.
 
 Codebook
 --------

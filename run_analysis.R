@@ -40,7 +40,7 @@ GetDataSet1 <- function(root_directory= "UCI HAR Dataset") {
   #STEP2: 2.	Extracts only the measurements on the mean and standard deviation for each measurement. 
   allRecords <- allRecords[,grep("mean|std|activityLabel",featureNames)]
   
-  #rename variable names to more readable form.
+  #variable engineering
   
   variableNames <- names(allRecords)
   variableNames <- gsub(pattern="^t",replacement="time",variableNames) # beginning of line
@@ -60,7 +60,9 @@ GetDataSet1 <- function(root_directory= "UCI HAR Dataset") {
   testActivities <- read.table(testactivitiesData,stringsAsFactors=FALSE)
   trainingActivities <- read.table(trainingactivitiesData,stringsAsFactors=FALSE)
   allActivities <- rbind(testActivities,trainingActivities)
-  #assign a column name so we can merge on it
+  
+  #assign a column name so that we could do a join using this as the key
+
   colnames(allActivities)[1] <- "activityID"
   #join the activityLabels - we use join from the plyr package and not merge, because join
   #preserves order
@@ -81,12 +83,15 @@ GetDataSet1 <- function(root_directory= "UCI HAR Dataset") {
 }
 
 GetDataSet2 <- function(tidy) {
+  
   #create a long shaped dataset from a wide shaped dataset
   melted <- melt(tidy,id= c("subject","activity"))
+  
   # we only retained subject and activity since we're interested in the means of the others
   # for these. the other features will go under 'variable' column (value col for values)
   #transform the long shaped dataset back into a wide shaped dataset, 
   #aggregating on subject and activity using the mean function
+  
   tidy2 <- dcast(melted, subject+activity ~ variable, fun.aggregate=mean)
   
 }

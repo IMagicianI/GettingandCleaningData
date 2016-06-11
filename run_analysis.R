@@ -1,15 +1,7 @@
-RequireOrInstall <- function(package) {
-  suppressWarnings({
-    if (!require(package,character.only=TRUE)) {
-      installPackage <- readline(paste("Package",package,"not found. Install? (y for yes, otherwise for no): "))
-      if (installPackage == "y") {
-        install.packages(package)
-      }
-      require(package,character.only=TRUE)  
-    }})
-}
-RequireOrInstall("plyr")
-RequireOrInstall("reshape2")
+install.packages("plyr")
+library("plyr")
+install.packages("reshape2")
+library("reshape2")
 
 GetDataSet1 <- function(root_directory= "UCI HAR Dataset") {
   
